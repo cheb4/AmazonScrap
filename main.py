@@ -5,16 +5,17 @@
 from db_funkcijos import *
 from amazonFun1 import *
 
-amazon_db_login = {"host": "localhost", "user": "root", "password": "", "database": "amazon"}
-amazon_products_db_login = {"host": "localhost", "user": "root", "password": "", "database": "amazon_prekes"}
-
+amazon_db_login = {"host": "localhost", "user": "root",
+                   "password": "", "database": "amazon"}
+amazon_products_db_login = {
+    "host": "localhost", "user": "root", "password": "", "database": "amazon_prekes"}
+# sample
 proxies = {
     'http': 'http://190.152.4.54:65301',
     'https': 'http://137.74.168.174:8080',
 }
 
 viskas = patikrinti_db(sql="SELECT * FROM `nuorodos`", login=amazon_db_login)
-
 
 
 for tuplas in viskas:
